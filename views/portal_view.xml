@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+        <template id="portal_stock_show" name="Stock">
+            <t t-call="portal.portal_layout">
+              <div id="portal_stock_show">
+              </div>
+            </t>
+        </template>
+    </data>
+</odoo>

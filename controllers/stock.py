@@ -16,8 +16,8 @@ class StockViewer(http.Controller):
         dict_body = json.loads(body)
         _logger.info(dict_body)
         _logger.info('-------------------------------------')
-        product_product_obj = request.env['product.product']
-        stock_quant = request.env['stock.quant']
+        product_product_obj = request.env['product.product'].sudo()
+        stock_quant = request.env['stock.quant'].sudo()
 
         if not dict_body['filter'] and not dict_body['order_by'] and dict_body['curr_page'] == 0:
             _logger.info('ENTRA A CONDICION INICIAL')

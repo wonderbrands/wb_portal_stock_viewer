@@ -229,6 +229,7 @@ export class StockGetterPort{
     async onChangeTab(filters, sort, page) {
         console.log("stock table controller")
         console.log(this.StockTableController)
+        
         this.StockList.curr_page = page;
         await this.StockList.getPaginatedProducts(
             filters,

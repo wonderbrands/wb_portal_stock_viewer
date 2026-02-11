@@ -23,7 +23,7 @@ class StockViewer(http.Controller):
             _logger.info('ENTRA A CONDICION INICIAL')
             # 1. Find all stock records in 'AG/Stock' with a quantity greater than 0.
             quants = stock_quant.search([
-                ('location_id.complete_name', '=', 'AG/Stock'),
+                ('location_id.complete_name', '=', 'WH/Stock'),
                 ('available_quantity', '>=', 5)
             ])
 
@@ -67,7 +67,7 @@ class StockViewer(http.Controller):
             #handle filters
             #availability
             # 1. Start with a domain for STORABLE fields only.
-            stock_quant_domain = [('location_id.complete_name', '=', 'AG/Stock')]
+            stock_quant_domain = [('location_id.complete_name', '=', 'WH/Stock')]
 
             # 2. Search the database with this safe, storable domain.
             quants_in_location = stock_quant.search(stock_quant_domain)

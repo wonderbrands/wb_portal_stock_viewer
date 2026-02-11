@@ -13,7 +13,7 @@
     'website': "http://www.yourcompany.com",
 
     'category': 'Uncategorized',
-    'version': '15.0',
+    'version': '18.0',
 
     'depends': [
         'base',

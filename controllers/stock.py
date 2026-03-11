@@ -6,6 +6,15 @@ import json
 _logger = logging.getLogger(__name__)
 
 class StockViewer(http.Controller):
+    @http.route(['/stock'], type='http', auth="user", website=True)
+    def my_custom_portal_page(self, **kw):
+        return request.render("wb_portal_stock_viewer.portal_stock_show", {})
+
+    @http.route(['/stock_test'], type='http', auth="user")
+    def my_custom_portal_page_test(self, **kw):
+        return "Route works!"
+
+
     @http.route('/controller/get_products', type='json', auth='user', website=True)
     def stock_viewer(self, **kwargs):
         _logger.info('-------------------------------------')

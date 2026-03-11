@@ -26544,7 +26544,6 @@ class PortalStock extends Component {
 
 
 
-// Mount for frontend (portal) when DOM is ready
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initPortal);
 } else {

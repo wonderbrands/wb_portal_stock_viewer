@@ -32,7 +32,7 @@ class StockViewer(http.Controller):
             _logger.info('ENTRA A CONDICION INICIAL')
             # 1. Find all stock records in 'AG/Stock' with a quantity greater than 0.
             quants = stock_quant.search([
-                ('location_id.complete_name', '=', 'WH/Stock'),
+                ('location_id.complete_name', 'ilike', 'WH/Stock'),
                 ('available_quantity', '>=', 5)
             ])
 
